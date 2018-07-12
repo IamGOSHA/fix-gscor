@@ -1,0 +1,514 @@
+
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+.header{
+	height: 55px;
+	width: 100%;
+	background-color: transparent;
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.animation .anim-delay1{
+	animation-delay: .1s;
+	animation-duration: .7s;
+	animation-name: fadeInUp;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.animation .anim-delay2{
+	animation-delay: .3s;
+	animation-duration: .7s;
+	animation-name: fadeInUp;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.animation .anim-delay3{
+	animation-delay: .5s;
+	animation-duration: .7s;
+	animation-name: fadeInUp;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+.animation .anim-delay4{
+	animation-delay: .7s;
+	animation-duration: .7s;
+	animation-name: fadeInUp;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.hidden{
+	opacity: 0;
+}
+
+.preview-menu{
+	z-index: 50;
+	position: absolute;
+	top: 13px;
+	right: 3%;
+	background-color: #000;
+	color: #fff;
+	width: 128px;
+	height: 48px;
+	padding: 0 20px;
+	display: flex;
+	cursor: pointer;
+	justify-content: space-between;
+	align-items: center;
+	span{
+		font-size: 18px;
+		font-family: "GothamPro-Medium", sans-serif;
+	}
+}
+.logo{
+	position: fixed;
+
+	left: 3%;
+	top: 25px;
+	z-index: 100;
+	a{
+		font-family: "GothamPro-Light", sans-serif;
+		font-weight: bold;
+		letter-spacing: .7px;
+		font-size: 24px;
+		text-transform: uppercase;
+		color: #000;
+	}
+}
+.menu-toggle{
+	width: 16px;
+	height: 12px;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	span{
+		width: 16px;
+		height: 2px;
+		display: block;
+		background-color: #fff;
+	}
+}
+.preview{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+
+}
+.preview-mainBlock{
+    flex-grow: 0;
+	order: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 668px;
+	padding: 50px 90px 47px 60px;
+
+
+}
+.preview-imgBlock{
+	position: relative;
+	width: 65%;
+	background: url("../img/headerbg.jpg");
+	background-position: 0 0;
+	background-size: cover;
+	order: 2;
+    flex-grow: 1;
+	.shadow{
+		background: linear-gradient( 0deg, rgb(33,33,33) 0%, rgba(0,0,0,0) 100%);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 200px;
+		z-index: 10;
+	}
+}
+.title-wrp{
+	.preview-title{
+		margin-top: 12vh;
+		padding-right: 0;
+		font-family: "GothamPro-Light", sans-serif;
+		font-size: 20px;
+		color: $font-color;
+		line-height: 30px;
+
+	}
+	.slogan{
+		font-family: GothamPro-Medium, sans-serif;
+		font-size: 32px;
+		font-weight: 400;
+		display: block;
+		margin-top: 10px;
+		line-height: 48px;
+
+	}
+}
+.mainBlock-description{
+	display: block;
+	margin-bottom: 50px;
+}
+.description-text{
+	font-size: 16px;
+	width: 100%;
+	line-height: 24px;
+	color: $font-color;
+	font-family: "HelveticaNeueCyr-Roman", sans-serif;
+	font-weight: 400;
+	p{
+		width: 100%;
+	}
+
+}
+.wr-btn{
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 50px;
+}
+
+.order-button{
+	border: 3px solid #000;
+	border-radius: 18px;
+	background-color: #fff;
+	height: 36px;
+	padding: 5px 22px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 800;
+	display: inline-block;
+	font-family: "GothamPro-Medium", sans-serif;
+}
+
+.panel{
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	list-style-type: none;
+	bottom: 80px;
+	left: 51%;
+	z-index: 50;
+	transform: translateX(-48%);
+	.panel-item{
+		height: 48px;
+		padding: 0 30px;
+		width: auto;
+		font-family: 'HelveticaNeueCyr-Light',sans-serif;
+		justify-content: space-between;
+		color: #fff;
+		flex-direction: column;
+		&:first-child{
+			border-right: 1px solid #fff;
+			padding-left: 0;
+		}
+		&:last-child{
+			border-left: 1px solid #fff;
+			padding-right: 0;
+			padding-left: 32px;
+		}
+	}
+}
+
+
+
+.speedometer{
+	width: 43px;
+	height: 24px;
+	background-image: url("../img/speedometer.png");
+}
+.numbers{
+	font-family: "GothamPro-Medium", sans-serif;
+	font-size: 18px;
+	line-height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	span{
+		font-size: 32px;
+		font-family: "GothamPro-Medium", sans-serif;
+
+	}
+}
+.weather{
+	height: 24px;
+	width: 36px;
+	background-image: url("../img/weather.png")
+}
+.white-stars{
+	width: 84px;
+	height: 16px;
+	display: flex;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	background-image: url("../img/whitestars.png");
+}
+.top{
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom{
+	text-align: center;
+	margin-top: 6px;
+	span{
+		font-size: 14px;
+		color: #fff;
+		white-space: nowrap;
+
+	}
+}
+@-webkit-keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+/* media queries */
+
+
+@media screen and (max-width: 1200px) {
+.panel {
+	left: 50%;
+	z-index: 50;
+	transform: translateX(-50%);
+	.panel-item {
+		padding: 0 25px;
+	}
+}
+}
+
+
+@media screen and (max-width: 991px) {
+  .preview {
+	  flex-direction: column;
+	  height: 100vh;
+	  overflow: hidden;
+		
+  }
+	.preview-imgBlock {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		background-position: left center;
+		order: 1 !important;
+	}
+	.preview-mainBlock{
+		order: 2 !important;
+		display: flex;
+		width: 100%;
+		min-height: 200px;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: flex-start;
+		padding: 20px;
+		background-color: #fff;
+		font-family: "GothamPro-Light", sans-serif;
+		position: relative;
+		z-index: 1;
+		.wr-btn{
+			width: 100%;
+			text-align: left;
+			bottom: 0;
+			position: relative;
+		}
+
+	}
+	.title-wrp{
+		display: block;
+		width: 50%;
+		.preview-title {
+			margin-top: 0;
+			display: inline-block;
+			width: 100%;
+			padding-right: 20px;
+			height: auto;
+			font-size: 16px;
+			line-height: 25px;
+		}
+		.slogan{
+			font-size: 24px;
+			width: 100%;
+			margin-left: 0;
+			line-height: 35px;
+			font-weight: bold;
+			display: inline-block;
+		}
+	}
+  .mainBlock-description{
+	  padding: 0;
+	  position: relative;
+	  bottom: 0;
+	  margin-bottom: 0;
+	  display: block;
+	  text-align: left;
+	  width: 50%;
+  }
+.description-text{
+	width: 100%;
+	padding-left: 25px;
+	p{
+		font-family: "HelveticaNeueCyr-Roman", sans-serif;
+		padding-top: 0;
+		padding-right: 0;
+		font-size: 16px;
+		width: 100%;
+
+		line-height: 24px;
+	}
+}
+  .order-button{
+    margin-top: 10px;
+	display: inline-block;
+    border: 3px solid #000;
+    border-radius: 18px;
+    background-color: #fff;
+    padding: 5px 20px;
+    line-height: 22px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: center;
+    font-family: "GothamPro-Medium", sans-serif;
+  }
+	.panel{
+	left: 50%;
+	transform: translateX(-50%);
+	}
+	.choose-dryer{
+		.choose-block{
+			width: 100%;
+			margin: 0;
+		}
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+.preview{
+	height: auto}
+.preview-imgBlock{
+	height: 100vh;
+}
+
+.panel{
+	.panel-item{
+		padding: 0 10px;
+		&:first-child{
+			padding-right: 5px;
+		}
+		&:last-child{
+			padding-left: 5px;
+		}
+	}
+	.bottom{
+		span{
+		font-size: 10px;
+		}
+	}
+}
+	.numbers{
+		font-family: "GothamPro-Medium", sans-serif;
+		font-size: 18px;
+		line-height: 25px;
+		display: inline-block;
+		vertical-align: middle;
+		white-space: nowrap;
+		margin-left: 10px;
+		span{
+			font-size: 22px;
+			font-family: "GothamPro-Medium", sans-serif;
+		}
+	}
+	.white-stars{
+		margin-bottom: 11px;
+	}
+	.wr-btn{
+		margin-bottom: 0;
+
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+.preview{
+	.preview-title{
+		font-size: 16px;
+	}
+	.slogan{
+		font-size: 24px;
+		line-height: 34px;
+		}
+}
+.preview-mainBlock{
+	.title-wrp{
+		width: 100%;
+		.preview-title{
+			font-size: 16px;
+			line-height: 20px;
+		}
+		.slogan{
+			font-size: 24px;
+			line-height: 34px;
+			padding-right: 0;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.mainBlock-description{
+	width: 100%;
+	margin-bottom: 24px;
+}
+.description-text{
+	padding-left: 0;
+	line-height: 24px;
+	font-size: 16px;
+}
+.order-button{
+	margin-top: 0;
+}
+}
+
+@media screen and(width: 800px) and (height: 480px){
+	.preview{
+		.preview-imgBlock{
+			height: 50%;
+		}
+
+	}
+}
